@@ -28,31 +28,31 @@ from connect_database import connect_database
 import mysql.connector
 from mysql.connector import Error
 
-# def list_distinct_trainers():
+def list_distinct_trainers():
 
-#     conn = connect_database()
+    conn = connect_database()
 
-#     if conn is not None:
-#         try:
-#             cursor = conn.cursor()
+    if conn is not None:
+        try:
+            cursor = conn.cursor()
             
-#             #new_member = [id, name, age, trainer_id]
+            #new_member = [id, name, age, trainer_id]
 
-#             query = "SELECT DISTINCT trainer_id FROM Members"
+            query = "SELECT DISTINCT trainer_id FROM Members"
 
-#             cursor.execute(query)
-#             for trainer in cursor.fetchall():
-#                 print(trainer)
+            cursor.execute(query)
+            for trainer in cursor.fetchall():
+                print(trainer)
 
-#         except Error as e:
-#             print(f"Error: {e}")
+        except Error as e:
+            print(f"Error: {e}")
 
-#         finally:
-#             print("Closing cursor and connection...")
-#             cursor.close()
-#             conn.close()
+        finally:
+            print("Closing cursor and connection...")
+            cursor.close()
+            conn.close()
 
-# list_distinct_trainers()
+list_distinct_trainers()
 
 # Task 2: SQL COUNT Functionality
 
